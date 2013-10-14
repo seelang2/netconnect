@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Net Connect</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header><div class="newgame">New Game</div><div> </div><div class="help">Help</div></header>
+            <div class="ap" id="splash"><div>
+                <h1>Net Connect</h1>
+                <p>(Yes, I know it needs a better name.)</p>
+                <p>Rotate the network nodes to connect all the terminals to the server. Click or tap
+                the node to rotate it.</p>
+                <p>Click 'New Game' to begin.</p>
+                <p>Good Luck!</p>
+            </div></div>
+            <div class="ap scrollable" id="help"><div>
+                <p>Net Connect v0.05 by Chris Langtiw</p>
+                <p>The goal of the game is to connect all the terminal nodes as by rotating the tiles until 
+                all paths are connected. Click or tap the tile to rotate it.</p>
+                <p>Click 'New Game' to begin. or click the screen to return.</p>
+                <p>Inspired by Scrambled Net by Ian Cameron Smith and KNetwalk by Andi Peredri, Thomas Nagy, 
+                and Reinhold Kainhofer.</p>
+                <p>This program is open-source software; you can redistribute it and/or modify it under the
+                terms of the GNU General Public License as published by the Free Software Foundation; either 
+                version 2 of the License, or (at your option) and later version.</p>
+                <p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+                without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See 
+                the GNU General Public License at <a href="http://www.gnu.org/licenses/gpl-2.0.html">
+                http://www.gnu.org/licenses/gpl-2.0.html</a> for more details.</p>
+            </div></div>
+            <div class="ap" id="newgame"><div>
+                <h1>New Game</h1>
+                <p>Select a grid size:</p>
+                <div>
+                    <p><input type="radio" name="gridsize" value="0" checked /> <span>Small (3x5)</span></p>
+                    <p><input type="radio" name="gridsize" value="1" /> <span>Medium (6x9)</span></p>
+                    <p><input type="radio" name="gridsize" value="2" /> <span>Large (9x12)</span></p>
+                    <p class="small">Note: Large not recommended on devices with small screens.</p>
+                </div>
+                <div>
+                    <p><input type="checkbox" name="wrap" value="1" /> 
+                    <span>Wrap edges of grid around to other side</span></p>
+                </div>
+                <div class="center">
+                    <input type="button" name="start" value="Start Game" /> 
+                </div>
+            </div></div>
+            <div id="grid"></div>
+            <footer><div>Moves: 0</div><div> </div><div>Time: 0:00</div></footer>
+        </div><!-- wrapper -->
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            //App.initialize();
+            window.onload = App.launch;
+        </script>
+    </body>
+</html>
